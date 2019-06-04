@@ -9,6 +9,8 @@ set_technology = {
 	gw_artillery = 1
 	early_fighter = 1
 	CAS1 = 1
+	motorised_infantry =1
+	gwtank = 1
 }
 
 1939.1.1 = {
@@ -35,6 +37,7 @@ set_technology = {
 		gw_artillery = 1
 		interwar_antiair = 1
 		interwar_artillery = 1
+		motorised_infantry =1
 		gwtank = 1
 
 		#doctrines
@@ -64,29 +67,29 @@ set_technology = {
 	}
 }
 
-set_convoys = 10
+set_convoys = 50
 set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 0
+			popularity = 10
 		}
 
 		fascism = {
-			popularity = 0
+			popularity = 16
 		}
 		
 		communism = {
-			popularity = 0
+			popularity = 14
 		}
 		
 		neutrality = { 
-			popularity = 100
+			popularity = 60
 		}
 	}
 	
 	ruling_party = neutrality
-	last_election = "1936.1.1"
+	last_election = "1926.4.25"
 	election_frequency = 48
 	elections_allowed = no
 }
@@ -98,7 +101,10 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
-		#
+		dictator
+		warmonger
+		#inexperienced_monarch
+		wallis_fancy_title
 	}
 }
 
@@ -130,36 +136,52 @@ create_country_leader = {
 
 		parties = {
 		democratic = { 
-			popularity = 0
+			popularity = 5
 		}
 
 		fascism = {
-			popularity = 0
+			popularity = 25
 		}
 		
 		communism = {
-			popularity = 0
+			popularity = 10
 		}
 		
 		neutrality = { 
-			popularity = 100
+			popularity = 60
 		}
 	}
 	
 		ruling_party = neutrality
-		last_election = "1936.1.1"
+		last_election = "1926.4.25"
 		election_frequency = 48
 		elections_allowed = no
 	}
 }
 
 create_corps_commander = {
-	name = "Hasan Arfa"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	name = "abas gharebaghi"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 	traits = {  desert_fox }
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
 	planning_skill = 2
 	logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Hasan Arfe"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	traits = { logistics_wizard offensive_doctrine media_personality trait_cautious inflexible_strategist organizer }
+	skill = 5 
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+create_navy_leader = {
+	name = "Yadollah Binder"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+	traits = { blockade_runner superior_tactician }
+	skill = 4
 }
