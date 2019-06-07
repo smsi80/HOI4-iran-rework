@@ -8,9 +8,13 @@ add_ideas = {
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
+	motorised_infantry = 1
+	tech_support = 1
+	tech_recon = 1
 	gw_artillery = 1
 	early_fighter = 1
 	CAS1 = 1
+	gwtank = 1
 }
 
 1939.1.1 = {
@@ -32,6 +36,7 @@ set_technology = {
 	set_technology = {
 		tech_support = 1
 		tech_recon = 1
+		motorised_infantry = 1
 		infantry_weapons2 = 1
 		support_weapons = 1
 		gw_artillery = 1
@@ -66,39 +71,44 @@ set_technology = {
 	}
 }
 
-set_convoys = 10
+set_convoys = 25
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1936.1.1"
+	last_election = "1926.4.5"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	neutrality = 100
+	neutrality = 64
+	democratic = 15
+	fascism = 20
+	communism = 1
 }
-
+# His son, who came to power 41
+create_country_leader = {
+name = "Mohammad Reza Pahlavi"
+	desc = "POLITICS_MOHAMMAD_REZA_PAHLAVI_DESC"
+	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_3.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		Dictator
+	}
+}
 create_country_leader = {
 	name = "Reza Shah Pahlavi"
 	desc = "POLITICS_REZA_SHAH_PAHLAVI_DESC"
 	picture = "Portrait_Iran_Reza_Shah_Pahlavi.dds"
-	expire = "1965.1.1"
+	expire = "1936.1.2"
 	ideology = despotism
 	traits = {
-		#
+		Anti_Democrat
+		Dictator
+		Great_War_Hero
+		Warmonger
+		Monarchist_Media_Mogul	
 	}
 }
-
-# His son, who came to power 41
-#create_country_leader = {
-#	name = "Mohammad Reza Pahlavi"
-#	desc = "POLITICS_MOHAMMAD_REZA_PAHLAVI_DESC"
-#	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_3.dds"
-#	expire = "1965.1.1"
-#	ideology = despotism
-#	traits = {
-#		#
-#	}
-#}
 
 create_country_leader = {
 	name = "Soleyman Mirza Eskandari"

@@ -1,0 +1,238 @@
+focus_tree = { 
+id = PER
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = PER 
+} 
+} 
+#Focus for build civilian economy
+focus = { 
+id = PER_buildcivilianeconomy
+icon = GFX_goal_generic_construct_civ_factory
+x = 0
+y = 1
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = PER_buildeconomy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = industrial_complex
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = industrial_complex
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+ } 
+
+ } 
+
+#Focus for build economy
+focus = { 
+id = PER_buildeconomy
+icon = GFX_goal_generic_construct_civilian
+x = 2
+y = 0
+cost = 1
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = industrial_complex
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = industrial_complex
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+ } 
+
+ } 
+
+#Focus for Increased railway
+focus = { 
+id = PER_increasedrailway
+icon = GFX_goal_generic_construct_infrastructure
+x = 4
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PER_buildeconomy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+random_owned_controlled_state= {
+add_building_construction = {type = infrastructure
+level = 1
+instant_build = yes}
+
+}
+ } 
+
+ } 
+
+#Focus for Increased railway2
+focus = { 
+id = PER_increasedrailway2
+icon = GFX_goal_generic_construct_infrastructure
+x = 4
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PER_increasedrailway } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+random_owned_controlled_state= {
+add_building_construction = {type = infrastructure
+level = 5
+instant_build = yes}
+
+}
+ } 
+
+ } 
+
+#Focus for Increased railway3
+focus = { 
+id = PER_increasedrailway3
+icon = GFX_goal_generic_construct_infrastructure
+x = 4
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PER_increasedrailway2 } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+random_owned_controlled_state= {
+add_building_construction = {type = infrastructure
+level = 5
+instant_build = yes}
+
+}
+ } 
+
+ } 
+
+#Focus for build war economy
+focus = { 
+id = PER_buildwareconomy
+icon = GFX_goal_generic_construct_mil_factory
+x = 2
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PER_buildeconomy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+random_owned_controlled_state={
+ limit = {
+ free_building_slots = {
+ building = arms_factory
+ size > 0
+ include_locked = yes
+ }
+
+ }
+
+ add_extra_state_shared_building_slots = 1
+ add_building_construction = {
+ type = arms_factory
+ level = 1
+ instant_build = yes
+ }
+
+ set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER
+ }
+ } 
+
+ } 
+
+#Focus for get best political adviser
+focus = { 
+id = PER_getbestpoliticaladviser
+icon = GFX_goal_generic_forceful_treaty
+x = 7
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power= 150
+ } 
+
+ } 
+
+#Focus for fix the government
+focus = { 
+id = PER_fixthegovernment
+icon = GFX_focus_generic_home_defense
+x = 7
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PER_getbestpoliticaladviser } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+remove_ideas= government_corruption
+ } 
+
+ } 
+
+#Focus for king make bestchoise
+focus = { 
+id = PER_kingmakebestchoise
+icon = GFX_focus_hol_the_foundations_of_defense
+x = 7
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PER_fixthegovernment } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_country_leader_trait = Imperial_Connections
+ } 
+
+#End of focuses 
+ }
