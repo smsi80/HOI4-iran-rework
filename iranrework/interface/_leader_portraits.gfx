@@ -987,6 +987,6 @@ spriteTypes = {
 
 	spriteType = {
 		name = "mohamad_rezasah"
-		texturefile = "gfx\leaders\PER\mohamad_rezasah.dds"
+		texturefile = "gfx/leaders/PER/mohamad_rezasah.dds"
 	}
 }
